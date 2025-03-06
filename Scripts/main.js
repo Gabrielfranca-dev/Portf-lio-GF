@@ -51,7 +51,6 @@ menuLinks.forEach(link => {
     });
 });
 
-// Variável para armazenar o card aberto
 let cardAberto = null;
 
 // Função para mostrar o conteúdo oculto do card com lazy loading
@@ -64,12 +63,6 @@ function mostrar_oculto_content(button) {
     // Fecha o card aberto anteriormente
     if (cardAberto !== null) {
         fechar_oculto_content(cardAberto.querySelector('.close-button'));
-    }
-
-    // Verifica se o conteúdo oculto ainda não foi carregado
-    if (!ocultoContent.dataset.loaded) {
-        carregarConteudoOculto(ocultoContent); // Carrega o conteúdo se necessário
-        ocultoContent.dataset.loaded = 'true'; // Marca como carregado
     }
 
     // Exibe o conteúdo oculto
@@ -98,16 +91,6 @@ function mostrar_oculto_content(button) {
     });
 }
 
-// Função para carregar o conteúdo oculto do card
-function carregarConteudoOculto(ocultoContent) {
-    // Aqui, você pode carregar dinamicamente conteúdo como imagens, texto, etc.
-    // Por exemplo, usando fetch() para carregar o conteúdo ou outras estratégias.
-    const img = ocultoContent.querySelector('img'); // Supondo que o conteúdo seja uma imagem
-    if (img) {
-        img.src = img.dataset.src; // Carrega a imagem quando for visível
-    }
-}
-
 // Função para fechar o conteúdo oculto
 function fechar_oculto_content(button) {
     const card = button.closest('.card');
@@ -125,6 +108,14 @@ function fechar_oculto_content(button) {
     });
 
     cardsContainer.classList.remove('no-hover-all');
+
+    // Pausar o vídeo do iframe
+    const iframe = card.querySelector('iframe');
+    if (iframe) {
+        const iframeSrc = iframe.src;
+        iframe.src = ''; // Remove o src para parar o vídeo
+        iframe.src = iframeSrc; // Restaura o src para recomeçar o vídeo, se necessário
+    }
 
     cardAberto = null;
 }
@@ -160,9 +151,9 @@ document.addEventListener("DOMContentLoaded", () => {
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add("active"); // Adiciona a classe para ativar o efeito
+                    entry.target.classList.add("active");
                     if (entry.target.dataset.src) {
-                        entry.target.src = entry.target.dataset.src; // Lazy load para imagens
+                        entry.target.src = entry.target.dataset.src;
                     }
                 } else {
                     entry.target.classList.remove("active");
