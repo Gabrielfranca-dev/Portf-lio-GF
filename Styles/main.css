@@ -379,6 +379,16 @@ main .projects .card {
   margin: 15px 0;
   transition: z-index 0.3s ease;
 }
+main .projects .card .pulse {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 50px;
+  z-index: 11;
+}
+main .projects .card .pulse.above-cards {
+  z-index: 20;
+}
 main .projects .card .banner {
   z-index: 1;
   height: 100%;
@@ -579,6 +589,9 @@ main .projects .card:hover .titulo-projeto {
 main .projects .card:hover .oculto {
   opacity: 1;
   transform: translateY(0);
+}
+main .projects .card:hover .pulse {
+  opacity: 0;
 }
 main .projects .card.no-hover {
   pointer-events: none;

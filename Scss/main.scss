@@ -450,6 +450,19 @@ main {
             margin: 15px 0;
             transition: z-index 0.3s ease;
 
+            .pulse {
+                position: absolute;
+                bottom: -20px;
+                right: -20px;
+                width: 50px;
+                z-index: 11;
+            }
+
+            .pulse.above-cards {
+                z-index: 20;
+            }
+
+
             .banner {
                 z-index: 1;
                 height: 100%;
@@ -675,6 +688,10 @@ main {
                 .oculto {
                     opacity: 1;
                     transform: translateY(0);
+                }
+
+                .pulse {
+                    opacity: 0;
                 }
             }
 

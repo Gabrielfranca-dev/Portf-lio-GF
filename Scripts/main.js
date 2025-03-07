@@ -1,6 +1,23 @@
-document.getElementById('toggle').addEventListener('change', (e) => {
-    document.body.classList.toggle('light-mode', e.target.checked);
+document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('toggle');
+    document.body.classList.add('light-mode'); // Ativa o modo light por padrão
+    toggle.checked = true; // Define o estado do toggle como ativado
+    
+    toggle.addEventListener('change', (e) => {
+        document.body.classList.toggle('light-mode', e.target.checked);
+    });
 });
+
+let growing = true;
+const pulses = document.querySelectorAll('.pulse'); // Seleciona todos os elementos com a classe .pulse
+
+// Configuração para pulsar a imagem
+const interval = setInterval(() => {
+    pulses.forEach(img => {  // Itera sobre todos os elementos .pulse
+        img.style.transform = growing ? 'scale(1.2)' : 'scale(1)';
+    });
+    growing = !growing;
+}, 1000);
 
 function nav_bar() {
     const navBar = document.querySelector('.nav-bar-hidden');
