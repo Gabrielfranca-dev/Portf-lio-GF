@@ -143,7 +143,7 @@ main .projects .cards {
 main .projects .card {
   background-color: white;
   width: 400px;
-  height: 200px;
+  height: 230px;
   position: relative;
   z-index: 1;
   margin: 15px 0;
@@ -231,7 +231,7 @@ main .projects .card .oculto-content .close-button {
   background: none;
   border: none;
   color: #fff;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   z-index: 10000;
@@ -264,13 +264,17 @@ main .projects .card .oculto-content .content .info {
   text-align: justify;
   font-weight: 500;
   color: #888;
-  font-size: 1rem;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
 }
 main .projects .card .oculto-content .content .info h1 {
   text-align: center;
   margin: 10px 0;
   color: #4682B4;
-  font-size: 1.75rem;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 32px;
 }
 main .projects .card .oculto-content .content .info p {
   margin: 0px 65px 0px 0;
@@ -312,7 +316,9 @@ main .projects .card .oculto-content .links a {
   background-image: linear-gradient(90deg, #1E90FF 0%, #0073E6 92.32%);
   padding: 5px 15px;
   border-radius: 5px;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 11px;
 }
 main .projects .card .oculto-content .links a:first-child {
   margin-left: 1.5%;
