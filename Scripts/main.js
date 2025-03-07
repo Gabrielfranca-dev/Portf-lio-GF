@@ -77,7 +77,7 @@ function mostrar_oculto_content(button) {
     const oculto = card.querySelector('.oculto');
     const cardsContainer = document.querySelector('.cards');
 
-    // Fecha o card aberto anteriormente
+    // Fecha o card aberto anteriormente, se houver
     if (cardAberto !== null) {
         fechar_oculto_content(cardAberto.querySelector('.close-button'));
     }
@@ -106,11 +106,18 @@ function mostrar_oculto_content(button) {
         top: centerY,
         behavior: 'smooth'
     });
+
+    // Adiciona evento para fechar ao clicar fora do card
+    setTimeout(() => {
+        document.addEventListener('click', fecharForaDoCard);
+    }, 10);
 }
 
 // Função para fechar o conteúdo oculto
 function fechar_oculto_content(button) {
-    const card = button.closest('.card');
+    if (!cardAberto) return;
+
+    const card = cardAberto;
     const ocultoContent = card.querySelector('.oculto-content');
     const oculto = card.querySelector('.oculto');
     const cardsContainer = document.querySelector('.cards');
@@ -135,7 +142,23 @@ function fechar_oculto_content(button) {
     }
 
     cardAberto = null;
+
+    // Remove o evento de clique fora do card
+    document.removeEventListener('click', fecharForaDoCard);
 }
+
+// Função para fechar o card ao clicar fora dele
+function fecharForaDoCard(event) {
+    if (!cardAberto) return;
+
+    const ocultoContent = cardAberto.querySelector('.oculto-content');
+
+    // Verifica se o clique foi fora da área do card
+    if (!ocultoContent.contains(event.target)) {
+        fechar_oculto_content();
+    }
+}
+
 
 // Adicionar hover para cards individuais
 document.querySelectorAll('.card').forEach(card => {
