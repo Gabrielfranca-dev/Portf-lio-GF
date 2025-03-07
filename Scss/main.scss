@@ -23,8 +23,9 @@ main {
                 text-align: left;
 
                 h1, p {
-                    font-size: u.$font-size-h1;
+                    font-size: 42px;
                     font-weight: 500;
+                    line-height: 54px;
                 }
 
                 p, span, input {
@@ -34,17 +35,26 @@ main {
                 a {
                     input {
                         width: 100%;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 14px;
                     }
                 }
 
                 p {
                     color: u.$cor-5; // Azul (border-color)
                 }
+
+                span {
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 20px;
+                }
             }
 
             img {
-                width: 390px;
-                height: 390px;
+                max-width: 392px;
+                max-height: 383px;
                 border-radius: 50%;
             }
         }
@@ -58,10 +68,19 @@ main {
         div {
             width: 80%;
             text-align: justify;
+
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 32px;
+                color: rgb(130, 130, 130);
+            }
         }
 
         h1 {
-            font-size: u.$font-size-h2;
+            font-size: 31px;
+            line-height: 31px;
+            font-weight: 600;
             margin-bottom: 10px;
         }
     }
@@ -70,7 +89,9 @@ main {
         margin-bottom: 50px;
 
         h1 {
-            font-size: u.$font-size-h2;
+            font-size: 31px;
+            font-weight: 600;
+            line-height: 31px;
             margin-bottom: 40px;
         }
 
@@ -88,9 +109,10 @@ main {
                 justify-content: center;
             
                 h1 {
-                    font-size: 20px;
+                    font-size: 16px;
                     font-weight: 500;
-                    color: u.$cor-2; // Branco (text-color-white)
+                    line-height: 16px;
+                    color: u.$cor-2;
                     margin: 10px 0 5px 0;
                 }
             
@@ -105,16 +127,20 @@ main {
         .item {
             height: 120px;
             width: 120px;
-            background-color: u.$cor-9; // Cinza escuro (background-cards)
+            background-color: u.$cor-9;
             border-top-left-radius: 30px;
+            padding: 10px;
+            overflow: hidden;
     
             &::after {
-                background-image: u.$cor-7; // Gradiente (gradient-background)
+                background-image: u.$cor-7;
                 content: "";
                 height: 3px;
                 display: block;
                 position: relative;
-                bottom: 0;
+                width: 100vw;
+                left: -10px;
+                bottom: -10px;
             }
         }
     }
@@ -124,7 +150,9 @@ main {
         flex-direction: column;
     
         .titulo {
-            font-size: u.$font-size-h2;
+            font-size: 31px;
+            font-weight: 600;
+            line-height: 31px;
             margin-bottom: 20px;
         }
     
@@ -140,8 +168,8 @@ main {
     
         .card {
             background-color: white;
-            width: 393px;
-            height: 245px;
+            width: 300px;
+            height: 100px;
             position: relative;
             z-index: 1;
             margin: 15px 0;

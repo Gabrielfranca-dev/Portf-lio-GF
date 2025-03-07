@@ -32,16 +32,19 @@ header {
                 }
 
                 i {
-                    font-size: 25px;
+                    font-size: 20px;
                     color: u.$cor-5; // Azul (border-color)
                 }
             }
 
             &:nth-child(2) {
                 a {
-                    font-size: 20px;
-                    font-weight: 700;
-                    line-height: 27px;
+
+                    h1 {
+                        font-size: 26px;
+                        font-weight: 700;
+                        line-height: 26px;
+                    }
                     color: u.$cor-2; // Branco (text-color-white)
                     text-decoration: none;
                 }
