@@ -9,6 +9,7 @@ header {
   background-color: #0D1B2A;
   z-index: 9;
   position: fixed;
+  max-height: 26px;
 }
 header .contein {
   width: 80%;

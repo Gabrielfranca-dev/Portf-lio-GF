@@ -9,6 +9,7 @@ header {
     background-color: u.$cor-1; // Azul bem escuro (background-header)
     z-index: 9;
     position: fixed;
+    max-height: 26px;
 
     .contein {
         width: 80%;
