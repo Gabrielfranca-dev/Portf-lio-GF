@@ -129,7 +129,7 @@ main {
             width: 120px;
             background-color: u.$cor-9;
             border-top-left-radius: 30px;
-            padding: 10px;
+            padding: 3px;
             overflow: hidden;
     
             &::after {
@@ -140,7 +140,7 @@ main {
                 position: relative;
                 width: 100vw;
                 left: -10px;
-                bottom: -10px;
+                bottom: -3px;
             }
         }
     }
@@ -204,15 +204,20 @@ main {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    font-size: u.$font-size-h4; /* Ajuste o tamanho do título */
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 16px;
                 }
             }
         
             .oculto {
                 position: absolute;
-                bottom: -60px;
+                bottom: -45px;
                 z-index: 10;
-                height: 60px;
+                height: 45px;
+                font-size: 11px;
+                font-weight: 500;
+                line-height: 11px;
                 border-bottom-right-radius: 30px;
                 border-bottom-left-radius: 30px;
                 width: 100%;
@@ -223,6 +228,13 @@ main {
                 opacity: 0;
                 transform: translateY(0px);
                 transition: all 0.6s ease;
+
+                input {
+                    font-size: 11px;
+                    font-weight: 500;
+                    line-height: 11px;
+                    height: 30px;
+                }
             }
         
             .oculto-content {

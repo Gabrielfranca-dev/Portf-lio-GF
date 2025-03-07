@@ -107,7 +107,7 @@ main .skills .item {
   width: 120px;
   background-color: #212121;
   border-top-left-radius: 30px;
-  padding: 10px;
+  padding: 3px;
   overflow: hidden;
 }
 main .skills .item::after {
@@ -118,7 +118,7 @@ main .skills .item::after {
   position: relative;
   width: 100vw;
   left: -10px;
-  bottom: -10px;
+  bottom: -3px;
 }
 main .projects {
   display: flex;
@@ -177,13 +177,18 @@ main .projects .card .titulo-projeto h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.5rem; /* Ajuste o tamanho do título */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
 }
 main .projects .card .oculto {
   position: absolute;
-  bottom: -60px;
+  bottom: -45px;
   z-index: 10;
-  height: 60px;
+  height: 45px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 11px;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   width: 100%;
@@ -194,6 +199,12 @@ main .projects .card .oculto {
   opacity: 0;
   transform: translateY(0px);
   transition: all 0.6s ease;
+}
+main .projects .card .oculto input {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 11px;
+  height: 30px;
 }
 main .projects .card .oculto-content {
   position: fixed;
