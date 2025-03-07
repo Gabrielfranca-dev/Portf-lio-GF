@@ -211,6 +211,7 @@ main .projects .card .oculto input {
   margin-right: 5%;
   text-align: center;
   display: flex;
+  padding: 9px 15px 10px 15px; /* Remove espaçamentos internos */
   justify-content: center;
   align-items: center;
 }
