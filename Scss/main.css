@@ -193,18 +193,22 @@ main .projects .card .oculto {
   border-bottom-left-radius: 30px;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   background-color: rgb(33, 33, 33);
   opacity: 0;
   transform: translateY(0px);
   transition: all 0.6s ease;
 }
+main .projects .card .oculto p {
+  margin-left: 5%;
+}
 main .projects .card .oculto input {
   font-size: 11px;
   font-weight: 500;
   line-height: 11px;
   height: 30px;
+  margin-right: 5%;
 }
 main .projects .card .oculto-content {
   position: fixed;
@@ -300,7 +304,7 @@ main .projects .card .oculto-content .content .info ul {
   margin-bottom: 15px;
 }
 main .projects .card .oculto-content .content .info span {
-  margin: 0px 0px 0px 15px;
+  margin: 0px;
   color: #4682B4;
 }
 main .projects .card .oculto-content .links {
@@ -317,8 +321,8 @@ main .projects .card .oculto-content .links a {
   padding: 5px 15px;
   border-radius: 5px;
   font-weight: 500;
-  font-size: 11px;
-  line-height: 11px;
+  font-size: 15px;
+  line-height: 15px;
 }
 main .projects .card .oculto-content .links a:first-child {
   margin-left: 1.5%;
