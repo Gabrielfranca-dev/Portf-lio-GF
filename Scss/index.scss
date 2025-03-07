@@ -6,11 +6,8 @@
 }
 
 body {
-    background-color: u.$cor-1; // Azul bem escuro (background-body)
-    color: u.$cor-2; // Branco (text-color-white)
-    font-family: u.$font-family-primary;
-    font-weight: 500;
-    font-style: normal;
+    background-color: u.$cor-1;
+    color: u.$cor-2;
     margin: 0;
     text-align: center;
 }
@@ -28,16 +25,14 @@ header, main, footer {
 .btn {
     background-color: transparent;
     padding: 10px 15px;
-    color: u.$cor-2; // Branco (text-color-white)
+    color: u.$cor-2;
     border-radius: 30px;
-    border: 2px solid u.$cor-5; // Azul (border-color)
+    border: 2px solid u.$cor-5;
     cursor: pointer;
-    font-family: u.$font-family-secondary;
-    font-size: u.$font-size-paragraph;
     transition: transform 0.2s ease, background 0.3s ease;
 
     &:hover {
-        background-image: u.$cor-7; // Gradiente (gradient-background)
+        background-image: u.$cor-7;
         transform: scale(0.95);
     }
 }
@@ -72,7 +67,7 @@ header, main, footer {
         border-color: transparent;
     }
     to {
-        border-color: u.$cor-2; // Branco (text-color-white)
+        border-color: u.$cor-2;
     }
 }
 
@@ -92,14 +87,14 @@ header, main, footer {
 }
 
 ::-webkit-scrollbar-track {
-    background: u.$cor-1; // Azul bem escuro (scroll-background)
+    background: u.$cor-1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: u.$cor-8; // Azul escuro (scroll-bar-color)
+    background: u.$cor-8;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: u.$cor-5; // Azul (scroll-bar-hover)
+    background: u.$cor-5;
 }

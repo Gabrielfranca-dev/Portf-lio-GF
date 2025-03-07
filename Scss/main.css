@@ -368,7 +368,9 @@ main .contacts {
   align-items: center;
 }
 main .contacts h1 {
-  font-size: 2rem;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
 }
 main .contacts .content {
   margin-top: 50px;
@@ -387,6 +389,9 @@ main .contacts .info p a {
   text-decoration: none;
   display: flex;
   flex-wrap: wrap;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
 }
 main .contacts .info p a:hover {
   text-decoration: underline;

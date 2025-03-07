@@ -429,7 +429,9 @@ main {
         align-items: center;
 
         h1 {
-            font-size: u.$font-size-h2;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 32px;
         }
     
         .content {
@@ -451,6 +453,9 @@ main {
                     text-decoration: none;
                     display: flex;
                     flex-wrap: wrap;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 16px;
 
                     &:hover {
                         text-decoration: underline;

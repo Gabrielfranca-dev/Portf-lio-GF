@@ -7,20 +7,20 @@
 .light-mode .home input {
   color: #13131F;
   font-weight: 500;
-  font-size: 1rem;
 }
 .light-mode .home input:hover {
   color: #FFFFFF;
 }
+.light-mode .about div p {
+  color: #13131F;
+}
 .light-mode .projects h3 {
   color: #FFFFFF;
-  font-size: 1.75rem;
 }
 .light-mode .projects .oculto p {
   color: #FFFFFF;
-  font-size: 1rem;
 }
 .light-mode .contacts .info p a {
   color: #13131F;
-  font-size: 0.875rem;
+  font-weight: bold;
 }/*# sourceMappingURL=light-mode.css.map */

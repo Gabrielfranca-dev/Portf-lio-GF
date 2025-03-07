@@ -8,7 +8,6 @@
   }
   .home div:first-child {
     text-align: center;
-    font-size: 2rem;
   }
   .home div:first-child h1, .home div:first-child p, .home div:first-child span {
     white-space: normal;
@@ -22,7 +21,6 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 15px;
-    font-size: 0.875rem;
   }
   .home div:last-child img {
     width: 250px;
@@ -34,7 +32,6 @@
   }
   .skills .content .item h1 {
     margin-top: 10px;
-    font-size: 1.25rem;
   }
   .skills .content .item img {
     margin: auto;
@@ -77,9 +74,11 @@
   .projects .cards .card .oculto-content .content .info {
     width: 100%;
   }
+  .projects .cards .card .oculto-content .content .info h1 {
+    margin: 10px 0px;
+  }
   .projects .cards .card .oculto-content .content .info p {
-    margin: 0px 10px 0px 10px; /* Margem para espaçamento */
-    font-size: 1rem;
+    margin: 0px 10px 0px 10px;
   }
   .projects .cards .card .oculto-content .links a {
     margin: 0 15px 0 0;
@@ -116,6 +115,10 @@
   }
   main .skills {
     min-height: 70vh;
+  }
+  main .skills .content .item {
+    max-height: 90px;
+    max-width: 90px;
   }
   main .projects .cards .card .oculto-content .links {
     display: flex; /* Exibe os links em linha */
