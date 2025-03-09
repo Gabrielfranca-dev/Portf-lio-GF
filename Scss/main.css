@@ -693,7 +693,7 @@ main .team .content .users {
 }
 main .team .content .users .user {
   flex: 1;
-  width: 49%;
+  width: 50%;
   border: 2px solid #1E90FF;
   background-color: rgba(0, 115, 230, 0.44);
   padding: 0px;
@@ -710,6 +710,8 @@ main .team .content .users .user {
 main .team .content .users .user h2 {
   margin: 15px 0;
   font-size: 22px;
+  max-width: 90%;
+  word-break: break-all;
 }
 main .team .content .users .user img {
   margin-top: 20px;
@@ -721,6 +723,7 @@ main .team .content .users .user img {
 }
 main .team .content .users .user p {
   width: 95%;
+  padding: 0px 5px;
   overflow-y: auto;
   text-align: justify;
 }
