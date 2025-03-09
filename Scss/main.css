@@ -976,9 +976,6 @@ footer::before {
   }
 }
 @media (max-width: 480px) {
-  body {
-    overflow-x: hidden;
-  }
   main .home, main .projects, main .contacts, main .about {
     margin-bottom: 55px;
   }
@@ -1059,6 +1056,7 @@ footer::before {
   }
   main .team .content .users .user {
     margin: auto;
+    height: 600px !important;
     width: 300px !important;
     margin-bottom: 80px;
   }

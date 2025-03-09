@@ -1184,10 +1184,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-    body {
-        overflow-x: hidden;
-    }
-    
+
     main {
         .home, .projects, .contacts, .about {
             margin-bottom: 55px;
@@ -1296,6 +1293,7 @@ footer {
 
                     .user {
                         margin: auto;
+                        height: 600px !important;
                         width: 300px !important;
                         margin-bottom: 80px;
 

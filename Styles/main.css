@@ -7,26 +7,20 @@
 }
 
 .swiper-slide {
-  text-align: center;
   font-size: 18px;
-  background: #fff;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 * {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 body {
@@ -655,10 +649,14 @@ main .team .content {
   height: 400px;
   display: flex;
 }
-main .team .content iframe {
-  width: 38%;
-  height: 72%;
+main .team .content .swiper {
+  width: 600px;
+  height: 370px;
   border-radius: 10px;
+}
+main .team .content .swiper .swiper-button-prev, main .team .content .swiper .swiper-button-next {
+  background-color: rgba(245, 222, 179, 0);
+  border: none;
 }
 main .team .content .users {
   width: 70%;
@@ -685,7 +683,7 @@ main .team .content .users .user {
 main .team .content .users .user .pulse {
   position: absolute;
   bottom: -40px;
-  right: -40px;
+  right: -20px;
   width: 65px;
   height: 65px;
   z-index: 11;
@@ -950,23 +948,17 @@ footer::before {
   }
   .team {
     margin-bottom: 50px;
+    position: relative;
   }
   .team .content {
     flex-direction: column;
     width: 100%;
     height: 100vh !important;
   }
-  .team .content iframe {
-    width: 870px !important;
-    height: 70% !important;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   .team .content .users {
+    position: absolute;
+    top: 600px;
     width: 100% !important;
-    margin-top: 50px;
     justify-content: space-around;
   }
   .team .content .users .user {
@@ -984,6 +976,9 @@ footer::before {
   }
 }
 @media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
   main .home, main .projects, main .contacts, main .about {
     margin-bottom: 55px;
   }
@@ -1030,15 +1025,34 @@ footer::before {
     flex-direction: column;
     width: 100%;
     height: 100vh !important;
+    position: relative;
   }
-  main .team .content iframe {
-    width: 310px !important;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  main .team .content .swiper {
+    width: 340px;
+    height: 200px;
+    border-radius: 10px;
+  }
+  main .team .content .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+  main .team .content .swiper-slide img {
+    width: 100%;
+    height: 100%;
+  }
+  main .team .content .swiper-button-prev, main .team .content .swiper-button-next {
+    background-color: rgba(245, 222, 179, 0);
+    border: none;
+  }
+  main .team .content .swiper-button-prev {
+    left: 10px;
+  }
+  main .team .content .swiper-button-next {
+    right: 10px;
   }
   main .team .content .users {
+    position: absolute;
+    top: 200px;
     width: 100% !important;
     margin-top: 50px;
     flex-direction: column;
