@@ -235,8 +235,8 @@ window.onload = function () {
         updateImage();
     }
 
-    // Troca a imagem automaticamente a cada 3 segundos
-    setInterval(nextImage, 15000);
+    // Troca a imagem automaticamente a cada 5 segundos
+    setInterval(nextImage, 5000);
 
     // Adiciona evento de clique na imagem para navegação manual
     image.addEventListener("click", function (event) {
