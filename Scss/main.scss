@@ -1169,6 +1169,12 @@ footer {
             flex-direction: column;
             width: 100%;
             height: 100vh !important;
+            background-color: red($color: #000000);
+
+            .swiper {
+                height: 42vh;
+                width: 80vw !important;
+            }
 
             .users {
                 position: absolute;
@@ -1261,13 +1267,9 @@ footer {
         }
 
         .team {
-            background-color: red;
-            height: 1900px;
-    
             .content {
                 flex-direction: column;
-                width: 100%;
-                height: 100vh !important;
+                height: 1300px !important;
                 position: relative;
 
                 .swiper {
@@ -1300,17 +1302,15 @@ footer {
                 }
     
                 .users {
-                    position: absolute;
                     top: 200px;
-                    width: 100% !important;
                     margin-top: 50px;
-                    flex-direction: column;
 
                     .user {
                         margin: auto;
                         height: 430px !important;
                         width: 300px !important;
                         margin-bottom: 80px;
+                        margin-top: 0;
 
                         .oculto {
                             .links {
