@@ -208,13 +208,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.onload = function () {
     const image = document.getElementById("slideImage");
-    const prevButton = document.getElementById("prevButton");
-    const nextButton = document.getElementById("nextButton");
-
-    if (!image || !prevButton || !nextButton) {
-        console.error("Elementos não encontrados! Verifique os IDs.");
-        return;
-    }
 
     const images = [
         "imgs/Team/slide/1.jpg",
@@ -227,23 +220,33 @@ window.onload = function () {
     ];
 
     let currentIndex = 0;
-    let isTransitioning = false; // Flag para evitar cliques consecutivos rápidos
 
     function updateImage() {
         image.src = images[currentIndex];
-        isTransitioning = true; // Bloqueia novos cliques temporariamente
-        setTimeout(() => isTransitioning = false, 300); // Espera 300ms antes de liberar o clique novamente
     }
 
-    nextButton.addEventListener("click", function () {
-        if (isTransitioning) return; // Impede cliques seguidos muito rápidos
+    function nextImage() {
         currentIndex = (currentIndex + 1) % images.length;
         updateImage();
-    });
+    }
 
-    prevButton.addEventListener("click", function () {
-        if (isTransitioning) return;
+    function prevImage() {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         updateImage();
+    }
+
+    // Troca a imagem automaticamente a cada 3 segundos
+    setInterval(nextImage, 15000);
+
+    // Adiciona evento de clique na imagem para navegação manual
+    image.addEventListener("click", function (event) {
+        const clickX = event.clientX;
+        const imageWidth = image.clientWidth;
+
+        if (clickX < imageWidth / 2) {
+            prevImage(); // Clique na esquerda -> Volta imagem
+        } else {
+            nextImage(); // Clique na direita -> Avança imagem
+        }
     });
 };
