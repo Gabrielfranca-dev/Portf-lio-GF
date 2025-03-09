@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
@@ -235,7 +236,7 @@ header:after {
 main {
   font-family: "Poppins", serif;
 }
-main .home, main .about, main .skills, main .projects, main .contacts {
+main .home, main .about, main .skills, main .projects, main .team, main .contacts {
   min-height: 100vh;
 }
 main .home {
@@ -610,6 +611,127 @@ main .projects .card::after {
 main .projects.content-visible .card {
   z-index: -1;
 }
+main .team {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main .team h1 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 50px;
+}
+main .team .content {
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 20px;
+  width: 80%;
+  height: 400px;
+  display: flex;
+}
+main .team .content iframe {
+  width: 38%;
+  height: 72%;
+  border-radius: 10px;
+}
+main .team .content .users {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+main .team .content .users .user {
+  border: 2px solid #0073E6;
+  background-color: rgba(0, 115, 230, 0.4392156863);
+  padding: 10px;
+  border-top-left-radius: 20px;
+  width: 420px;
+  color: #F9F9F9;
+  font-size: 17px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Necessário para posicionar a .oculto em relação à .user */
+  /* Remove a transformação ao passar o mouse */
+  /* Exibe .oculto ao passar o mouse */
+}
+main .team .content .users .user .pulse {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 65px;
+  height: 65px;
+  z-index: 11;
+}
+main .team .content .users .user h2 {
+  margin: 15px 0;
+  font-size: 20px;
+}
+main .team .content .users .user img {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  -o-object-fit: cover;
+     object-fit: cover; /* Garante que a imagem não se distorça */
+}
+main .team .content .users .user p {
+  width: 90%;
+  height: 160px;
+  overflow-y: auto;
+  text-align: justify;
+}
+main .team .content .users .user:hover {
+  transform: none;
+  box-shadow: none;
+}
+main .team .content .users .user:hover .oculto {
+  display: block;
+}
+main .team .content .users .user .oculto {
+  border: 1px solid #0073E6;
+  display: none; /* Inicialmente oculta */
+  position: absolute; /* Permite o posicionamento livre dentro da .user */
+  bottom: -68px; /* Posiciona abaixo da .user, ajustável */
+  left: -1px;
+  width: 100%;
+  height: 12%;
+  background-color: #212121;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 10px 0;
+}
+main .team .content .users .user .oculto .links {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+main .team .content .users .user .oculto .links a {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #1E90FF;
+  border-radius: 10px;
+  font-weight: 500;
+  padding: 5px 15px;
+  margin: 0 5px;
+  height: 20px; /* Ajuste a altura para garantir o centralizado */
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Alinha horizontalmente */
+  font-size: 15px;
+  line-height: 15px;
+}
+main .team .content .users .user .oculto .links a:last-child {
+  margin-right: 20px;
+}
+main .team .content .users .user .oculto .links a:hover {
+  background-image: linear-gradient(90deg, #1E90FF 0%, #0073E6 92.32%);
+}
 main .contacts {
   display: flex;
   flex-direction: column;
@@ -715,6 +837,9 @@ footer::before {
 .light-mode .projects .oculto p {
   color: #FFFFFF;
 }
+.light-mode .team .content .users .user {
+  background-color: #0D1B2A;
+}
 .light-mode .contacts .info p a {
   color: #13131F;
   font-weight: bold;
@@ -800,6 +925,30 @@ footer::before {
   .projects .cards .card .oculto-content .links a {
     margin: 0 15px 0 0;
   }
+  .team {
+    margin-bottom: 50px;
+  }
+  .team .content {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh !important;
+  }
+  .team .content iframe {
+    width: 870px !important;
+    height: 70% !important;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .team .content .users {
+    width: 100% !important;
+    margin-top: 50px;
+    justify-content: space-around;
+  }
+  .team .content .users .user {
+    width: 400px !important;
+  }
   .contacts {
     min-height: 70vh !important;
   }
@@ -850,6 +999,34 @@ footer::before {
     box-sizing: border-box;
     margin: 0;
     width: auto;
+  }
+  main .team {
+    margin-bottom: 300px;
+  }
+  main .team .content {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh !important;
+  }
+  main .team .content iframe {
+    width: 310px !important;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .team .content .users {
+    width: 100% !important;
+    margin-top: 50px;
+    flex-direction: column;
+  }
+  main .team .content .users .user {
+    margin: auto;
+    width: 300px !important;
+    margin-bottom: 80px;
+  }
+  main .team .content .users .user .oculto .links a:last-child {
+    margin-right: 4px;
   }
   main .contacts {
     margin-bottom: 0;
