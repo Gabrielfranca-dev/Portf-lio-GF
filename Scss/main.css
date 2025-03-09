@@ -665,11 +665,10 @@ main .team .content .swiper .swiper-slide img {
   border-radius: 10px;
 }
 main .team .content .swiper .swiper-button-prev, main .team .content .swiper .swiper-button-next {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -725,7 +724,7 @@ main .team .content .users .user p {
   padding: 0px 0px 5px 0px;
   width: 95%;
   padding: 0px 5px;
-  overflow-y: auto;
+  overflow-y: hidden;
   text-align: justify;
 }
 main .team .content .users .user:hover .oculto {
