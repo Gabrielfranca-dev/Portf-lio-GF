@@ -802,6 +802,7 @@ main {
                 .user {
                     flex: 1;
                     width: 50%;
+                    height: 100%;
                     border: 2px solid $cor-6;
                     background-color: rgba(0, 115, 230, 0.44);
                     padding: 0px;
@@ -819,7 +820,6 @@ main {
                         margin: 15px 0;
                         font-size: 22px;
                         max-width: 90%;
-                        word-break: break-all;
                     }
     
                     img {
