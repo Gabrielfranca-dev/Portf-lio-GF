@@ -683,7 +683,7 @@ main .team .content .users {
   flex-direction: row;
   justify-content: space-around;
   width: 80vw;
-  height: 70vh;
+  height: 80vh;
   flex-wrap: wrap; /* Para ajustar caso a tela seja menor */
 }
 main .team .content .users .user {
