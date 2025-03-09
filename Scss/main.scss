@@ -758,7 +758,7 @@ main {
             gap: 30px; /* Espaçamento entre os elementos */
     
             .swiper {
-                width: 40vw;
+                width: 100%;
                 max-width: 800px;
                 border-radius: 10px;
                 overflow: hidden;
@@ -831,6 +831,7 @@ main {
                     }
     
                     p {
+                        padding: 0px 0px 5px 0px;
                         width: 95%;
                         padding: 0px 5px;
                         overflow-y: auto;

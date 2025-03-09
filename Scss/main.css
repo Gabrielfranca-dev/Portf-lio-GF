@@ -649,7 +649,7 @@ main .team .content {
   gap: 30px; /* Espaçamento entre os elementos */
 }
 main .team .content .swiper {
-  width: 40vw;
+  width: 100%;
   max-width: 800px;
   border-radius: 10px;
   overflow: hidden;
@@ -722,6 +722,7 @@ main .team .content .users .user img {
      object-fit: cover;
 }
 main .team .content .users .user p {
+  padding: 0px 0px 5px 0px;
   width: 95%;
   padding: 0px 5px;
   overflow-y: auto;
