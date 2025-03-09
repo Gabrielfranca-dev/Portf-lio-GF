@@ -225,19 +225,24 @@ window.onload = function () {
         "imgs/Team/slide/6.jpg",
         "imgs/Team/slide/7.jpg",
     ];
-    
+
     let currentIndex = 0;
+    let isTransitioning = false; // Flag para evitar cliques consecutivos rápidos
 
     function updateImage() {
         image.src = images[currentIndex];
+        isTransitioning = true; // Bloqueia novos cliques temporariamente
+        setTimeout(() => isTransitioning = false, 300); // Espera 300ms antes de liberar o clique novamente
     }
 
     nextButton.addEventListener("click", function () {
+        if (isTransitioning) return; // Impede cliques seguidos muito rápidos
         currentIndex = (currentIndex + 1) % images.length;
         updateImage();
     });
 
     prevButton.addEventListener("click", function () {
+        if (isTransitioning) return;
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         updateImage();
     });
