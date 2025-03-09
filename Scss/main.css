@@ -641,16 +641,16 @@ main .team h1 {
   margin-bottom: 50px;
 }
 main .team .content {
+  background-color: red;
   display: flex;
   flex-direction: row; /* Slide em cima, usuários embaixo */
   align-items: center;
-  width: 80%;
+  width: 80vw;
   gap: 30px; /* Espaçamento entre os elementos */
 }
 main .team .content .swiper {
-  width: 80%;
+  width: 50vw;
   max-width: 800px;
-  height: 350px;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
@@ -686,14 +686,14 @@ main .team .content .users {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 50vw;
+  background-color: green;
   gap: 30px; /* Espaçamento entre usuários */
   flex-wrap: wrap; /* Para ajustar caso a tela seja menor */
 }
 main .team .content .users .user {
   flex: 1;
-  max-width: 400px; /* Reduzido de 450px para 400px */
-  min-width: 300px; /* Reduzido de 350px para 300px */
+  width: 40%;
   border: 2px solid #1E90FF;
   background-color: rgba(0, 115, 230, 0.44);
   padding: 0px;
