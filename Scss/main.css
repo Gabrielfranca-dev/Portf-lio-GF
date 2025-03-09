@@ -649,7 +649,7 @@ main .team .content {
   gap: 30px; /* Espaçamento entre os elementos */
 }
 main .team .content .swiper {
-  width: 100%;
+  width: 40%;
   max-width: 800px;
   border-radius: 10px;
   overflow: hidden;
