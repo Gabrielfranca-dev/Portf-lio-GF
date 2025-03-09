@@ -650,7 +650,7 @@ main .team .content {
   display: flex;
 }
 main .team .content .swiper {
-  width: 600px;
+  width: 500px;
   height: 370px;
   border-radius: 10px;
 }
