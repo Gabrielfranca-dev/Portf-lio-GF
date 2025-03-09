@@ -205,3 +205,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
     elements.forEach((el) => observer.observe(el));
 });
+
+window.onload = function () {
+    const image = document.getElementById("slideImage");
+    const prevButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("nextButton");
+
+    if (!image || !prevButton || !nextButton) {
+        console.error("Elementos não encontrados! Verifique os IDs.");
+        return;
+    }
+
+    const images = [
+        "imgs/Team/slide/1.jpg",
+        "imgs/Team/slide/2.jpg",
+        "imgs/Team/slide/3.jpg",
+        "imgs/Team/slide/4.jpg",
+        "imgs/Team/slide/5.jpg",
+        "imgs/Team/slide/6.jpg",
+        "imgs/Team/slide/7.jpg",
+    ];
+    
+    let currentIndex = 0;
+
+    function updateImage() {
+        image.src = images[currentIndex];
+    }
+
+    nextButton.addEventListener("click", function () {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+    });
+
+    prevButton.addEventListener("click", function () {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+    });
+};

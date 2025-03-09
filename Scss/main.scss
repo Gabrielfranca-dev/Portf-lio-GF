@@ -18,6 +18,23 @@ $cor-11: #4682B4;
 $font-family-primary: "DM Sans", serif;
 $font-family-secondary: "Poppins", serif;
 
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 // Reset básico
 * {
     margin: 0;
@@ -741,10 +758,15 @@ main {
             height: 400px;
             display: flex;
 
-            iframe {
-                width: 38%;
-                height: 72%;
+            .swiper {
+                width: 600px;
+                height: 370px;
                 border-radius: 10px;
+
+                .swiper-button-prev, .swiper-button-next{
+                    background-color: rgba(245, 222, 179, 0);
+                    border: none;
+                }
             }
     
             .users {
@@ -770,7 +792,7 @@ main {
                     .pulse {
                         position: absolute;
                         bottom: -40px;
-                        right: -40px;
+                        right: -20px;
                         width: 65px;
                         height: 65px;
                         z-index: 11;
@@ -1127,24 +1149,17 @@ footer {
 
     .team {
         margin-bottom: 50px;
+        position: relative;
 
         .content {
             flex-direction: column;
             width: 100%;
             height: 100vh !important;
 
-            iframe {
-                width: 870px !important;
-                height: 70% !important;
-                overflow: hidden;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
             .users {
+                position: absolute;
+                top: 600px;
                 width: 100% !important;
-                margin-top: 50px;
                 justify-content: space-around;
 
                 .user {
@@ -1169,6 +1184,10 @@ footer {
 }
 
 @media (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+    }
+    
     main {
         .home, .projects, .contacts, .about {
             margin-bottom: 55px;
@@ -1237,16 +1256,40 @@ footer {
                 flex-direction: column;
                 width: 100%;
                 height: 100vh !important;
-    
-                iframe {
-                    width: 310px !important;
-                    overflow: hidden;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                position: relative;
+
+                .swiper {
+                    width: 340px;
+                    height: 200px;
+                    border-radius: 10px;
+                }
+                
+                .swiper-slide {
+                    width: 100%;
+                    height: 100%;
+                }
+                
+                .swiper-slide img {
+                    width: 100%;
+                    height: 100%;
+                }
+                
+                .swiper-button-prev, .swiper-button-next {
+                    background-color: rgba(245, 222, 179, 0);
+                    border: none;
+                }
+                
+                .swiper-button-prev {
+                    left: 10px;
+                }
+                
+                .swiper-button-next {
+                    right: 10px;
                 }
     
                 .users {
+                    position: absolute;
+                    top: 200px;
                     width: 100% !important;
                     margin-top: 50px;
                     flex-direction: column;
