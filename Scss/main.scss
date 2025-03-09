@@ -758,7 +758,7 @@ main {
             gap: 30px; /* Espaçamento entre os elementos */
     
             .swiper {
-                width: 50vw;
+                width: 40vw;
                 max-width: 800px;
                 border-radius: 10px;
                 overflow: hidden;
@@ -794,14 +794,14 @@ main {
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                width: 50vw;
+                width: 60vw;
                 background-color: green;
                 gap: 30px; /* Espaçamento entre usuários */
                 flex-wrap: wrap; /* Para ajustar caso a tela seja menor */
     
                 .user {
                     flex: 1;
-                    width: 40%;
+                    width: 47%;
                     border: 2px solid $cor-6;
                     background-color: rgba(0, 115, 230, 0.44);
                     padding: 0px;
