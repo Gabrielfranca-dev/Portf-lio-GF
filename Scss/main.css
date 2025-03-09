@@ -693,7 +693,7 @@ main .team .content .users {
 }
 main .team .content .users .user {
   flex: 1;
-  width: 300px;
+  width: 350px;
   height: 400px;
   border: 2px solid #1E90FF;
   background-color: rgba(0, 115, 230, 0.44);
