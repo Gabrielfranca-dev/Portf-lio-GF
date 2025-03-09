@@ -688,7 +688,7 @@ main .team .content .users {
   align-items: center;
   width: 60vw;
   background-color: green;
-  gap: 10px; /* Espaçamento entre usuários */
+  gap: 5px; /* Espaçamento entre usuários */
   flex-wrap: wrap; /* Para ajustar caso a tela seja menor */
 }
 main .team .content .users .user {
