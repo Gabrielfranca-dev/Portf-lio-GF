@@ -829,7 +829,7 @@ main {
                     }
     
                     p {
-                        width: 90%;
+                        width: 95%;
                         overflow-y: auto;
                         text-align: justify;
                     }
@@ -882,6 +882,10 @@ main {
     
                                 &:last-child {
                                     margin-right: 20px;
+                                }
+
+                                &:hover {
+                                    background-image: $cor-7;
                                 }
                             }
                         }

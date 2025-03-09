@@ -720,7 +720,7 @@ main .team .content .users .user img {
      object-fit: cover;
 }
 main .team .content .users .user p {
-  width: 90%;
+  width: 95%;
   overflow-y: auto;
   text-align: justify;
 }
@@ -770,6 +770,9 @@ main .team .content .users .user .oculto .links a {
 }
 main .team .content .users .user .oculto .links a:last-child {
   margin-right: 20px;
+}
+main .team .content .users .user .oculto .links a:hover {
+  background-image: linear-gradient(90deg, #1E90FF 0%, #0073E6 92.32%);
 }
 main .contacts {
   display: flex;
