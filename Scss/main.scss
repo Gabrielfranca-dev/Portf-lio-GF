@@ -1178,7 +1178,7 @@ footer {
 
             .users {
                 position: absolute;
-                top: 600px;
+                top: 450px;
                 width: 100% !important;
                 justify-content: space-around;
 
@@ -1272,37 +1272,17 @@ footer {
                 height: 1300px !important;
                 position: relative;
 
-                .swiper {
-                    width: 350px;
-                    height: 190px;
-                    border-radius: 10px;
-                }
-                
-                .swiper-slide {
-                    width: 100%;
-                    height: 100%;
-                }
-                
-                .swiper-slide img {
-                    width: 100%;
-                    height: 100%;
-                }
-                
-                .swiper-button-prev, .swiper-button-next {
-                    background-color: rgba(245, 222, 179, 0);
-                    border: none;
-                }
-                
-                .swiper-button-prev {
-                    left: 10px;
-                }
-                
-                .swiper-button-next {
-                    right: 10px;
+                .video {
+                    width: 400px;
+                    height: 400px;
+
+                    iframe {
+                        width: 100%;
+                    }
                 }
     
                 .users {
-                    top: 200px;
+                    top: 300px;
                     margin-top: 50px;
 
                     .user {
