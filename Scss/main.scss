@@ -1275,15 +1275,19 @@ footer {
                 .video {
                     width: 80vw;
                     height: 400px;
+                    position: relative;
 
                     iframe {
                         width: 100%;
+                        height: calc(80vw * 9 / 16); /* Mantém a proporção 16:9 */
+                        max-height: 100%;
                     }
                 }
+                
     
                 .users {
-                    top: 300px;
-                    margin-top: 50px;
+                    top: 250px;
+                    margin-top: 0px;
 
                     .user {
                         margin: auto;
