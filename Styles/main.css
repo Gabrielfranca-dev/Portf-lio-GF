@@ -1044,7 +1044,7 @@ footer::before {
     position: relative;
   }
   main .team .content .video {
-    width: 400px;
+    width: 80vw;
     height: 400px;
   }
   main .team .content .video iframe {
